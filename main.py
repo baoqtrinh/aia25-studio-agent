@@ -24,8 +24,10 @@ else:
     attributes = extract_attributes(brainstorm)
     print(attributes)
 
+    # attributes = attributes.replace("\\", "")
     attributes = attributes.strip()
     attributes = json.loads(attributes)
+
     shape, theme, materials = (attributes[k] for k in ("shape", "theme", "materials"))
 
     ### EXAMPLE 3: Chaining ###

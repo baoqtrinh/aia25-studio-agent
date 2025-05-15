@@ -3,7 +3,7 @@ from openai import OpenAI
 from server.keys import *
 
 # Mode
-mode = "local" # "local" or "openai" or "cloudflare"
+mode = "cloudflare" # "local" or "openai" or "cloudflare"
 
 # API
 local_client = OpenAI(base_url="http://localhost:1234/v1", api_key="lm-studio")
@@ -37,7 +37,7 @@ llama3 = [
 ]
 
 # This is a cloudflare model
-cloudflare_model = "@hf/nousresearch/hermes-2-pro-mistral-7b"
+cloudflare_model = "@cf/meta/llama-3-8b-instruct"
 
 # Define what models to use according to chosen "mode"
 def api_mode (mode):
